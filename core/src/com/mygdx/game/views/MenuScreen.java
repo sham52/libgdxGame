@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
@@ -64,9 +65,9 @@ public class MenuScreen implements Screen {
                 parent.changeScreen(MyGdxGame.APPLICATION);
             }
         });
-        preferences.addListener(new ChangeListener(){
+        preferences.addListener(new ClickListener(){
              @Override
-            public void changed(ChangeEvent event, Actor actor){
+            public void clicked(InputEvent event, float x, float y){
                  parent.changeScreen(MyGdxGame.PREFERENCES);
              }
         });
