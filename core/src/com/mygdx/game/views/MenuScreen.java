@@ -34,7 +34,7 @@ public class MenuScreen implements Screen {
 
     @Override
     public void show() {
-        System.out.println("Ana Menü");
+        System.out.println("Ana MENU");
         Gdx.input.setInputProcessor(stage);
 
         //Create a table to hold buttons
