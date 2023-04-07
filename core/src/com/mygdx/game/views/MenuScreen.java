@@ -26,20 +26,24 @@ public class MenuScreen implements Screen {
     public MenuScreen(MyGdxGame myGdxGame) {
         parent = myGdxGame;
         stage = new Stage();
-        Gdx.input.setInputProcessor(stage);
+        skin = parent.getSkin();
+
         stage.act(Math.min(Gdx.graphics.getDeltaTime(), 1 / 30f));
         stage.draw();
     }
 
     @Override
     public void show() {
+        System.out.println("Ana Menü");
+        Gdx.input.setInputProcessor(stage);
+
         //Create a table to hold buttons
         Table table = new Table();
         table.setFillParent(true);
         table.setDebug(true);
         stage.addActor(table);
-        System.out.println("Ana Menü");
-        skin = parent.getSkin();
+
+
         //Add buttons to the table
         TextButton newGame = new TextButton("Yeni Oyun", skin);
         TextButton preferences = new TextButton("Ayarlar", skin);
