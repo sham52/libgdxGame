@@ -38,12 +38,12 @@ public class MenuScreen implements Screen {
         table.setFillParent(true);
         table.setDebug(true);
         stage.addActor(table);
-        System.out.println("Menu Screen");
+        System.out.println("Ana Menü");
         skin = parent.getSkin();
         //Add buttons to the table
-        TextButton newGame = new TextButton("New Game", skin);
-        TextButton preferences = new TextButton("Preferences", skin);
-        TextButton exit = new TextButton("Exit", skin);
+        TextButton newGame = new TextButton("Yeni Oyun", skin);
+        TextButton preferences = new TextButton("Ayarlar", skin);
+        TextButton exit = new TextButton("CIKIS", skin);
 
         table.setDebug(false);
         table.add(newGame).fillX().uniformX();

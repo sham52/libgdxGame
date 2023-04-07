@@ -46,7 +46,7 @@ public class PreferencesScreen implements Screen {
 
     @Override
     public void show() {
-        System.out.println("Preferences Screen");
+        System.out.println("Ayarlar EKRANI");
         stage = new Stage();
         Gdx.input.setInputProcessor(stage);
         createUI();
@@ -94,12 +94,12 @@ public class PreferencesScreen implements Screen {
         table.setDebug(false);
 
         // Title label
-        titleLabel = new Label("Preferences", skin);
+        titleLabel = new Label("Ayarlar", skin);
         table.add(titleLabel).colspan(2).padBottom(30);
         table.row();
 
         // Music volume label and slider
-        volumeMusicLabel = new Label("Music Volume", skin);
+        volumeMusicLabel = new Label("MUZIK SESI DUZEYI", skin);
         table.add(volumeMusicLabel).width(150).padRight(20);
         volumeMusicSlider = new Slider(0f, 1f, 0.1f, false, skin);
         volumeMusicSlider.setValue(parent.getPreferences().getMusicVolume());
@@ -114,7 +114,7 @@ public class PreferencesScreen implements Screen {
         table.row();
 
         // Music on/off label and checkbox
-        musicOnOffLabel = new Label("Music", skin);
+        musicOnOffLabel = new Label("MUZIK", skin);
         table.add(musicOnOffLabel).width(150).padRight(20);
         musicCheckbox = new CheckBox(null, skin);
         musicCheckbox.setChecked(parent.getPreferences().isMusicEnabled());
@@ -130,7 +130,7 @@ public class PreferencesScreen implements Screen {
         table.row();
 
         // Sound volume label and slider
-        volumeSoundLabel = new Label("Sound Volume", skin);
+        volumeSoundLabel = new Label("Ses DUZEYI", skin);
         table.add(volumeSoundLabel).width(150).padRight(20);
         volumeSoundSlider = new Slider(0f, 1f, 0.1f, false, skin);
         volumeSoundSlider.setValue(parent.getPreferences().getSoundVolume());
@@ -145,7 +145,7 @@ public class PreferencesScreen implements Screen {
         table.row();
 
         // Sound on/off label and checkbox
-        soundOnOffLabel = new Label("Sound Effects", skin);
+        soundOnOffLabel = new Label("SES EFEKTLERI", skin);
         table.add(soundOnOffLabel).width(150).padRight(20);
         soundCheckbox = new CheckBox(null, skin);
         soundCheckbox.setChecked(parent.getPreferences().isSoundEffectsEnabled());
@@ -161,7 +161,7 @@ public class PreferencesScreen implements Screen {
         table.row();
 
         // Back button
-        backButton = new TextButton("Back", skin, "default");
+        backButton = new TextButton("ANA MENUYE DON", skin, "default");
         backButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
